@@ -43,8 +43,7 @@ if (is_siteadmin()) {
             get_string('test_conn_desc', 'tool_sentry')));
         $PAGE->requires->js(new moodle_url('/admin/tool/sentry/js/connectiontest.js'));
         $renderer = $PAGE->get_renderer('tool_sentry');
-        $output = new \tool_sentry\output\test_buttons();
-        $html = $renderer->render($output);
+        $html = $renderer->render_test_buttons();
 
         $page->add(new admin_setting_heading(
             'integracaosigaa_test_button',
