@@ -11,6 +11,6 @@ class renderer extends \plugin_renderer_base
         $data = [
             'wwwroot' => $this->page->url->out(false)
         ];
-        return $this->render_from_template('admin/tool/sentry/templates/test_buttons', $data);
+        return $this->render_from_template('tool_sentry/test_buttons', $data);
     }
 }

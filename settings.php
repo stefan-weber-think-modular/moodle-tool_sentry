@@ -39,15 +39,13 @@ if (is_siteadmin()) {
             get_string('dsn_desc', 'tool_sentry'), ''));
         $page->add(new admin_setting_configtext('tool_sentry/javascriptloader', get_string('javascriptloader', 'tool_sentry'),
             get_string('javascriptloader_desc', 'tool_sentry'), ''));
-        $page->add(new admin_setting_heading('tool_sentry/testsconnection', get_string('test_conn', 'tool_sentry'),
-            get_string('test_conn_desc', 'tool_sentry')));
         $PAGE->requires->js(new moodle_url('/admin/tool/sentry/js/connectiontest.js'));
         $renderer = $PAGE->get_renderer('tool_sentry');
         $html = $renderer->render_test_buttons();
 
         $page->add(new admin_setting_heading(
             'integracaosigaa_test_button',
-            get_string("connection_test", 'tool_sentry'),
+            get_string('test_conn', 'tool_sentry'),
             $html
         ));
 

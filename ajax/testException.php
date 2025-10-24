@@ -1,20 +1,19 @@
 <?php
-
+require_once( '../../../../config.php');
+require_once( '../classes/helper.php');
 require_once( '../vendor/autoload.php');
 
-use Sentry\SentrySdk;
-use Sentry\ClientBuilder;
 
 header('Content-Type: text/plain');
 
-try {
-    \Sentry\init(['dsn' => get_config('tool_sentry', 'dsn')]);
-    Sentry\captureMessage('Sentry test message from Moodle.');
 
+try {
+    tool_sentry\helper::init();
     throw new Exception('This is a test exception from Moodle Sentry plugin.');
 
 } catch (Exception $e) {
-    Sentry\captureException($e);
+    $data = Sentry\captureException($e);
     echo "✅ Test exception sent to Sentry.\n";
     echo "Message: " . $e->getMessage() . "\n";
+    var_dump($data);
 }
