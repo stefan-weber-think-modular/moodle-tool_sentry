@@ -23,7 +23,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['test_exception'] = "Send Exception";
 $string['activate'] = "Activate Sentry Plugin";
 $string['activate_desc'] = "Activate Sentry to send information to the configured DSN";
 $string['always'] = "The SDK will always capture the request body as long as Sentry can make sense of it.";
@@ -74,5 +73,6 @@ $string['server_name'] = "Server Name";
 $string['server_name_desc'] = "This option can be used to supply a \"server name\". When provided, the name of the server is sent along and persisted in the event. For many integrations, the server name actually corresponds to the device hostname, even in situations where the machine is not actually a server.";
 $string['small'] = "Only small request bodies will be captured (typically 4KB)";
 $string['test_conn'] = "Test Connections";
+$string['test_exception'] = "Send Exception";
 $string['traces_sample_rate'] = "Traces Sample Rate";
 $string['traces_sample_rate_desc'] = "A number between 0 and 1, controlling the percentage chance a given transaction will be sent to Sentry. (0 represents 0% while 1 represents 100%.) Applies equally to all transactions created in the app. Either this or traces_sampler must be defined to enable tracing.";

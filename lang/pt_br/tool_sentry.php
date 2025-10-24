@@ -23,8 +23,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['test_conn'] = "Testar Conexões";
-$string['test_exception'] = "Enviar Exceção";
 $string['activate'] = "Ativar Plugin Sentry";
 $string['activate_desc'] = "Ativa o Sentry para enviar informações ao DSN configurado";
 $string['always'] = "O SDK sempre capturará o corpo da requisição enquanto o Sentry puder interpretá-lo.";
@@ -74,5 +72,7 @@ $string['sentry_options_desc'] = "Altera como as opções são enviadas ao Sentr
 $string['server_name'] = "Nome do Servidor";
 $string['server_name_desc'] = "Esta opção pode definir o \"nome do servidor\". Quando fornecido, o nome é enviado e persistido no evento. Em muitas integrações, corresponde ao hostname da máquina, mesmo que não seja realmente um servidor.";
 $string['small'] = "Apenas corpos de requisição pequenos serão capturados (tipicamente 4KB)";
+$string['test_conn'] = "Testar Conexões";
+$string['test_exception'] = "Enviar Exceção";
 $string['traces_sample_rate'] = "Taxa de Amostragem de Rastreamentos";
 $string['traces_sample_rate_desc'] = "Número entre 0 e 1, controlando a probabilidade de envio de uma transação ao Sentry (0 = 0%, 1 = 100%). Aplica-se a todas as transações do app. Deve ser definido junto com traces_sampler para habilitar rastreamento.";
