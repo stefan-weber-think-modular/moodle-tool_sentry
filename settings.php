@@ -191,7 +191,8 @@ if (is_siteadmin()) {
                 'tool_sentry/error_types',
                 get_string('error_types', 'tool_sentry'),
                 get_string('error_types_desc', 'tool_sentry'),
-                E_ALL, [
+                E_ALL,
+                [
                     E_ERROR             => 'E_ERROR',
                     E_WARNING           => 'E_WARNING',
                     E_PARSE             => 'E_PARSE',
@@ -208,7 +209,7 @@ if (is_siteadmin()) {
                     E_DEPRECATED        => 'E_DEPRECATED',
                     E_USER_DEPRECATED   => 'E_USER_DEPRECATED',
                     E_ALL               => 'E_ALL',
-                    ]
+                ]
             )
         );
         $page->add(
