@@ -67,7 +67,6 @@ $string['sample_rate'] = "Taxa de Amostragem";
 $string['sample_rate_desc'] = "Configura a taxa de amostragem de eventos de erro, de 0.0 a 1.0. Padrão 1.0 (100% dos eventos). Ex.: 0.1 envia apenas 10% dos eventos, escolhidos aleatoriamente.";
 $string['send_default_pii'] = "Enviar PII Padrão";
 $string['send_default_pii_desc'] = "Se ativado, certas informações pessoalmente identificáveis (PII) são enviadas por integrações ativas. Por padrão, nenhum dado é enviado.";
-$string['test_conn'] = "Testar Conexões";
 $string['sentry_options'] = "Opções do Sentry";
 $string['sentry_options_desc'] = "Altera como as opções são enviadas ao Sentry";
 $string['server_name'] = "Nome do Servidor";
@@ -75,4 +74,5 @@ $string['server_name_desc'] = "Esta opção pode definir o \"nome do servidor\".
 $string['small'] = "Apenas corpos de requisição pequenos serão capturados (tipicamente 4KB)";
 $string['traces_sample_rate'] = "Taxa de Amostragem de Rastreamentos";
 $string['traces_sample_rate_desc'] = "Número entre 0 e 1, controlando a probabilidade de envio de uma transação ao Sentry (0 = 0%, 1 = 100%). Aplica-se a todas as transações do app. Deve ser definido junto com traces_sampler para habilitar rastreamento.";
+$string['test_conn'] = "Testar Conexões";
 $string['test_exception'] = "Enviar Exceção";
