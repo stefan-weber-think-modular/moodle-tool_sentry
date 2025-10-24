@@ -25,20 +25,36 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-global $CFG, $ADMIN,$PAGE;
+global $CFG, $ADMIN, $PAGE;
 \tool_sentry\helper::init();
 
 if (is_siteadmin()) {
     if (!$ADMIN->locate('tool_sentry')) {
         $page = new admin_settingpage('sentryconfig', get_string('pluginsettings', 'tool_sentry'));
-        $page->add(new admin_setting_heading('tool_sentry/options', get_string('options', 'tool_sentry'),
-            get_string('options_desc', 'tool_sentry')));
-        $page->add(new admin_setting_configcheckbox('tool_sentry/activate',
-            get_string('activate', 'tool_sentry'), get_string('activate_desc', 'tool_sentry'), 0));
-        $page->add(new admin_setting_configtext('tool_sentry/dsn', get_string('dsn', 'tool_sentry'),
-            get_string('dsn_desc', 'tool_sentry'), ''));
-        $page->add(new admin_setting_configtext('tool_sentry/javascriptloader', get_string('javascriptloader', 'tool_sentry'),
-            get_string('javascriptloader_desc', 'tool_sentry'), ''));
+        $page->add(
+            new admin_setting_heading(
+                'tool_sentry/options',
+                get_string('options', 'tool_sentry'), get_string('options_desc', 'tool_sentry')
+            )
+        );
+        $page->add(
+            new admin_setting_configcheckbox(
+                'tool_sentry/activate',
+                get_string('activate', 'tool_sentry'), get_string('activate_desc', 'tool_sentry'), 0
+            )
+        );
+        $page->add(
+            new admin_setting_configtext(
+                'tool_sentry/dsn',
+                get_string('dsn', 'tool_sentry'),
+                get_string('dsn_desc', 'tool_sentry'),
+                ''
+            )
+        );
+        $page->add(
+            new admin_setting_configtext('tool_sentry/javascriptloader',
+                get_string('javascriptloader', 'tool_sentry'), get_string('javascriptloader_desc', 'tool_sentry'), '')
+        );
         $PAGE->requires->js(new moodle_url('/admin/tool/sentry/js/connectiontest.js'));
         $renderer = $PAGE->get_renderer('tool_sentry');
         $html = $renderer->render_test_buttons();

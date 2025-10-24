@@ -27,7 +27,7 @@ namespace tool_sentry;
 
 defined('MOODLE_INTERNAL') || die();
 
-require_once($CFG->dirroot.'/admin/tool/sentry/vendor/autoload.php');
+require_once($CFG->dirroot . '/admin/tool/sentry/vendor/autoload.php');
 
 /**
  * Class helper to provide functions to events
@@ -38,7 +38,6 @@ require_once($CFG->dirroot.'/admin/tool/sentry/vendor/autoload.php');
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class helper {
-
     /** @var bool Whether Sentry has already been initialized. */
     private static $initialized = false;
 
