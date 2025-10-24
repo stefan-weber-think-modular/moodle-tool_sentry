@@ -1,4 +1,13 @@
 <?php
+/**
+ * Ajax to Test Exception.
+ *
+ * @package   tool_sentry
+ * @author    Esdras Caleb
+ * @copyright  2023 Esdras Caleb
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -14,14 +23,6 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>
 
-/**
- * Ajax to Test Exception
- *
- * @package   tool_sentry
- * @author    Esdras Caleb
- * @copyright  2023 Esdras Caleb
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
 require_once( '../../../../config.php');
 require_once( '../classes/helper.php');
 require_once( '../vendor/autoload.php');

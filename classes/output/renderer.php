@@ -35,8 +35,7 @@ class renderer extends \plugin_renderer_base {
     /**
      * Renderer test button in the settings page.
      */
-    public function render_test_buttons()
-    {
+    public function render_test_buttons() {
         $data = [
             'wwwroot' => $this->page->url->out(false),
         ];
