@@ -106,7 +106,7 @@ if (is_siteadmin()) {
         $page->add(
             new admin_setting_configtext(
                 'tool_sentry/sample_rate',
-                get_string('sample_rate','tool_sentry'),
+                get_string('sample_rate', 'tool_sentry'),
                 get_string('sample_rate_desc', 'tool_sentry'),
                 1,
                 PARAM_FLOAT
@@ -139,7 +139,8 @@ if (is_siteadmin()) {
             )
         );
         $page->add(
-            new admin_setting_configtext('tool_sentry/max_breadcrumbs',
+            new admin_setting_configtext(
+                'tool_sentry/max_breadcrumbs',
                 get_string('max_breadcrumbs', 'tool_sentry'),
                 get_string('max_breadcrumbs_desc', 'tool_sentry'),
                 100,
@@ -151,12 +152,13 @@ if (is_siteadmin()) {
                 'tool_sentry/max_request_body_size',
                 get_string('max_request_body_size', 'tool_sentry'),
                 get_string('max_request_body_size_desc', 'tool_sentry'),
-                'medium', [
+                'medium',
+                [
                     'never'     => get_string('never', 'tool_sentry'),
                     'small'     => get_string('small', 'tool_sentry'),
                     'medium'    => get_string('medium', 'tool_sentry'),
                     'always'    => get_string('always', 'tool_sentry'),
-                    ]
+                ]
             )
         );
         $page->add(
@@ -228,8 +230,8 @@ if (is_siteadmin()) {
         $page->add(
             new admin_setting_configtext(
                 'tool_sentry/ignore_transactions',
-            get_string('ignore_transactions', 'tool_sentry'),
-            get_string('ignore_transactions_desc', 'tool_sentry'),
+                get_string('ignore_transactions', 'tool_sentry'),
+                get_string('ignore_transactions_desc', 'tool_sentry'),
                 ''
             )
         );
@@ -249,9 +251,7 @@ if (is_siteadmin()) {
                 ''
             )
         );
-
         $ADMIN->add('tools', $page);
-
     }
 }
 \tool_sentry\helper::geterros();

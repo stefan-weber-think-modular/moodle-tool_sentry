@@ -1,13 +1,4 @@
 <?php
-/**
- * Ajax to Test Exception.
- *
- * @package   tool_sentry
- * @author    Esdras Caleb
- * @copyright  2023 Esdras Caleb
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -21,20 +12,29 @@
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle.  If not, see <http://www.gnu.org/licenses/>
+// along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
-require_once( '../../../../config.php');
-require_once( '../classes/helper.php');
-require_once( '../vendor/autoload.php');
+/**
+ * Ajax to test exception.
+ *
+ * @package   tool_sentry
+ * @author    Esdras Caleb
+ * @copyright 2023 Esdras Caleb
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+require_once('../../../../config.php');
+require_once('../classes/helper.php');
+require_once('../vendor/autoload.php');
 
 require_admin();
 
 header('Content-Type: text/plain');
 
-try{
+try {
     tool_sentry\helper::init();
-    throw new Exception('This is a test exception from Moodle Sentry plugin.');
-} catch (Exception $e){
+    throw new Exception('This is a test exception from Moodle Sentry plugin!');
+} catch (Exception $e) {
     $data = Sentry\captureException($e);
     echo "✅ Test exception sent to Sentry.\n";
     echo "Message: " . $e->getMessage() . "\n";
